@@ -25,8 +25,17 @@ function ExternalData(){
       <h2>External User</h2>
       <p>{users.length}</p>
       {
-        users.map(user => <li>{user.name}</li>)
+        users.map(user => <User name={user.name} email={user.email}></User>)
       }
+    </div>
+  )
+}
+
+function User(props){
+  return(
+    <div style={{border: '2px solid crimson', margin: '20px', padding: '10px'}}>
+      <h1>{props.name}</h1>
+      <h2>{props.email}</h2>
     </div>
   )
 }
